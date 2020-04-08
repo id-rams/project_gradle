@@ -1,0 +1,5 @@
+rootProject.name = 'multi.project.gradle'
+
+include 'core'
+include 'page-objects'
+include 'web-tests'

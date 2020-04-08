@@ -1,0 +1,15 @@
+allprojects {
+    group = 'multi.project.gradle'
+    version = '1.0.0'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    sourceCompatibility = 1.13
+
+    repositories {
+        jcenter()
+    }
+
+}

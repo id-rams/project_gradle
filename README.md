@@ -1,1 +1,4 @@
-# multy_project_gradle
+# multi project gradle
+run 
+
+ `./gradlew :web-tests:test`

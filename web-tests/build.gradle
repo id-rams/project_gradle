@@ -1,0 +1,22 @@
+dependencies {
+    compile project(path: ':core')
+    compile project(path: ':page-objects')
+}
+
+test {
+    testLogging.showStandardStreams = true
+    options {
+        systemProperties(System.getProperties())
+    }
+
+    String nameSuite = System.getProperty("suite", "smoke")
+
+    String outputReportDir = System.getProperty("output_report_dir", "$buildDir/reports/$nameSuite")
+
+    reports.html.destination = file(outputReportDir)
+
+    useTestNG() {
+        useDefaultListeners = true
+        suites 'src/test/resources/test_suites/' + nameSuite + '.xml'
+    }
+}
