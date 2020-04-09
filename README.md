@@ -1,4 +1,4 @@
 # multi project gradle
 run 
 
- `./gradlew :web-tests:test`
+ `./gradlew :web-tests:clean test`
